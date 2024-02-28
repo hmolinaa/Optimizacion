@@ -3,22 +3,23 @@ Mediante los conociminetos adquiridos y entendiendo los metodos de optimizacion 
 
 De forma general, el algoritmo que implementamos para el Gradiente Descendente es el siguiente: 
 
-$$\begin{algorithm}
-    \SetAlgoLined
-    \KwIn {$x_0$, $f$, $\nabla f$, $H_f$}
-    \KwOut {$x^*$ (punto óptimo)}
-    
-    $k \leftarrow 0$\;
-    $g_0 \leftarrow -\nabla f(x_0)$\;
-    
-    \While {criterio de alto sea falso}{
-        $\alpha_k \leftarrow$ arg min$_{\alpha > 0}$ $f(x_k + \alpha d_k)$\;
-        $x_{k+1} \leftarrow x_k + \alpha_k g_k$\;
-        $g_{k+1} \leftarrow -\nabla f(x_{k+1})$\;
-        $k \leftarrow k + 1$\;
-    }
-    
-    \Return{$x^* = x_k$}\;
-    
-    \caption{Algoritmo de Gradiente Descendente }
-\end{algorithm}$$
+Entradas:
+    - x_0: punto inicial
+    - f: función objetivo
+    - ∇f: gradiente de la función
+    - H_f: Hessiana de la función (opcional)
+
+Salida:
+    - x^*: punto óptimo
+
+Inicializar k = 0
+Calcular g_0 = -∇f(x_0)
+
+Mientras el criterio de alto sea falso:
+    Calcular α_k = arg min_{α > 0} f(x_k + α d_k)
+    Actualizar x_{k+1} = x_k + α_k g_k
+    Calcular g_{k+1} = -∇f(x_{k+1})
+    Incrementar k en 1
+
+Devolver x^* = x_k
+

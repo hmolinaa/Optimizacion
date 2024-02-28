@@ -3,7 +3,7 @@ Mediante los conociminetos adquiridos y entendiendo los metodos de optimizacion 
 
 De forma general, el algoritmo que implementamos para el Gradiente Descendente es el siguiente: 
 
-$\begin{algorithm}
+$$\begin{algorithm}
     \SetAlgoLined
     \KwIn {$x_0$, $f$, $\nabla f$, $H_f$}
     \KwOut {$x^*$ (punto óptimo)}
@@ -21,4 +21,4 @@ $\begin{algorithm}
     \Return{$x^* = x_k$}\;
     
     \caption{Algoritmo de Gradiente Descendente }
-\end{algorithm}$
+\end{algorithm}$$
